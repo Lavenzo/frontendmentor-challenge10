@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.timeframes {
+  padding: 30px;
+  position: relative;
+  top: -40px; /* Shift upward */
+}
+
+.profile-header {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-header img {
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.profile-text p {
+  font-size: 14px;
+  color: hsl(236, 100%, 87%);
+}
+
+.profile-text h1 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.timeframes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.timeframes button {
+  background: none;
+  border: none;
+  color: hsl(236, 100%, 87%);
+  margin: 5px 0;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.timeframes .active {
+  color: white;
+}
+
+/* Cards Section */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--dark-blue);
+}
+
+.card-top {
+  height: 60px;
+  background-color: inherit; /* Will be overridden by color class */
+  position: relative;
+}
+
+.card-top img {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: auto;
+  opacity: 0.6;
+}
+
+.card-banner {
+  height: 60px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.card-banner img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Background colors per card */
+.card.work .card-banner {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.card.play .card-banner {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.card.study .card-banner {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.card.exercise .card-banner {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.card.social .card-banner {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.card.self-care .card-banner,
+.card.self-care .card-banner {
+  background-color: hsl(43, 84%, 65%);
+}

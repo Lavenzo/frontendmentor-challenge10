@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Tracking Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <!-- Profile Card -->
+      <section class="profile-card">
+        <div
+          class="profile-header"
+          style="
+            background-color: hsl(246, 80%, 60%);
+            padding: 30px 20px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-items: start;
+            gap: 20px;
+          "
+        >
+          <img
+            src="./assets/avatar-lavenzo.png"
+            alt="Kevin Lavenzo"
+            style="
+              width: 50px;
+              height: 60px;
+              border-radius: 50%;
+              border: 3px solid white;
+            "
+          />
+          <div style="color: white">
+            <p style="font-size: 0.7rem; opacity: 0.8; margin: 0">Report for</p>
+            <h1 style="font-weight: 400; margin: 0">Kevin <br />Lavenzo</h1>
+          </div>
+        </div>
+
+        <div class="timeframes">
+          <button id="daily" data-period="daily">Daily</button>
+          <button id="weekly" class="active" data-period="weekly">
+            Weekly
+          </button>
+          <button id="monthly" data-period="monthly">Monthly</button>
+        </div>
+      </section>
+
+      <!-- Activity Cards -->
+      <section class="cards" id="cards-container">
+        <!-- Cards will be injected by script.js -->
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
